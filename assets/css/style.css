@@ -36,6 +36,7 @@ header img{
 }
 h2{
     width: auto;
+    margin-top: 40px;
     background-color: white;
     color: black;
     font-family: 'Poller One', cursive;
@@ -89,6 +90,10 @@ section{
     text-align: justify;
     line-height: 30px;
 }
+.accueil img{
+    width: 50%;
+    margin: auto;
+}
 .musicien img{
     width: 204px;
     height: 158px;
@@ -116,20 +121,49 @@ section{
 	height: 100%;
 }
 
-.affichesflex {
+.photosflex {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.affiches img{
+.affiches img, .galerie img{
     margin: 20px auto;
     width: 70%;
+    border: solid 1px rgba(255, 255, 255, 0.459);
 }
 #flyer{
     width: 60%;
     margin: auto;
-    padding-bottom: 60px;
+}
+
+form {
+    display:flex;
+    flex-direction:column;
+    width:100%;
+    margin: 0;
+}
+form label{
+    width: 100%;
+    margin: auto;
+}
+form label span {
+    display: block;
+    width: 73px;
+    margin: auto;
+    text-align: center;
+}
+input, textarea, select, button {
+    display:block;
+    width:80%;
+    padding:0.5rem;
+    margin:0.5em auto;
+    font-family: 'Montserrat', sans-serif;
+}
+form button{
+    width: 50%;
+    height: 40px;
+    margin: 10px auto;
 }
 
 /** TO TOP **/
@@ -165,13 +199,12 @@ section{
 
 @media screen and (min-width : 494px){
     li{
-        width: 82px;
+        width: 89px;
         text-align: center;
         padding: 10px; 
     }
     li :hover{
         padding: 8px;
-        font-size: smaller; 
         border-left: solid 1px white;
         border-right: solid 1px white;
     }
@@ -206,21 +239,27 @@ section{
         margin: auto;
         padding: 40px 80px;
     }
-    .affichesflex {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start; 
+    .photosflex {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
     }
     .affiches img{
-    margin: 20px auto;
-    width: calc(80% / 2);
+        margin: 20px auto;
+        width: calc(80% / 2);
+    }
+    .galerie img{
+        margin: 20px auto;
+        width: 300px;
+        height: 300px;
+        object-fit: cover; 
+        padding: 5px;
     }
     #flyer{
-    width: 50%;
-    margin: 20px auto;
-    padding-bottom: 60px;
+        width: 50%;
+        margin: 20px auto;
     }
 }
 
@@ -240,5 +279,22 @@ section{
     .musicien p {
         padding: 10px;
         margin: 0;
+    }
+    .galerie img{
+        margin: 20px auto;
+        width: calc(90% / 2);
+        object-fit: cover; 
+    }
+    form {
+        display:flex;
+        flex-direction:column;
+        width:100%;
+        margin: 0;
+    }
+    input, textarea, select {
+        width: 50%;
+    }
+    form button{
+        width: 20%;
     }
 }

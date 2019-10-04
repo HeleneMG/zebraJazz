@@ -7,6 +7,8 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script src="https://unpkg.com/scrollreveal"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+        <script src="responsiveslides.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Poller+One|Roboto|Montserrat:300,800&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/style.css">
         <title><?php echo $title ?? "titre1 par défaut" ?></title>

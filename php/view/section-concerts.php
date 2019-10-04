@@ -13,7 +13,7 @@
         <h3>Concert à Peynier mars 2019 -L'histoire du Jazz en noir et blanc</h3>
         <img src="assets/img/concert4.jpg" alt="concert Peynier mars 2019">
 
-        <h3>Concert à Lançon de Provence septembre 2018</h3>
+        <h3>Concert à Lançon de Provence septembre 2018 (video)</h3>
         <div class="video">
             <iframe src="https://www.youtube.com/embed/YOEjPa-91dI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>

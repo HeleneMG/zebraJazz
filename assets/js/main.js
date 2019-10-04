@@ -6,7 +6,7 @@ var sticky = navbar.offsetTop;
 
 //TO TOP BUTTON apparition
 function scrollFunction() {
-    if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
         $(mybutton).fadeIn(700);
     } else {
         $(mybutton).fadeOut(700);
@@ -30,8 +30,10 @@ function fixedNavbar() {
 //SCROLLREVEAL H1
 ScrollReveal().reveal('h1', {
     duration: 200,
-    distance: '100px',
+    distance: '5px',
     origin: 'left',
     delay: 200,
     reset: true
 });
+
+//slider
