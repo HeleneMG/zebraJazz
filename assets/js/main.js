@@ -1,6 +1,6 @@
 //TO TOP & FIXED NAVBAR
 window.onscroll = function () { fixedNavbar(), scrollFunction() };
-var navbar = document.querySelector("nav");
+var navbar = document.querySelector(".deux");
 var mybutton = document.querySelector("#toTop");
 var sticky = navbar.offsetTop;
 
@@ -21,9 +21,12 @@ mybutton.addEventListener('click', function topFunction() {
 //FIXED NAVBAR
 function fixedNavbar() {
     if (window.pageYOffset >= sticky) {
-        navbar.classList.add("sticky")
+        navbar.classList.add("sticky");
+        navbar.classList.remove("deux")
     } else {
+        navbar.classList.add("deux");
         navbar.classList.remove("sticky");
+        
     }
 }
 
@@ -36,4 +39,54 @@ ScrollReveal().reveal('h1', {
     reset: true
 });
 
-//slider
+//MENU HAMBURGER
+$(document).ready(function () {
+    $(".menuNav").hide();
+    $(function () {
+        $(".menuHamb").on("click", function () {
+            $(".menuNav").toggle(200);
+        })
+        $(".arrow-back").on('click', function () {
+            $(".menuNav").toggle(200);
+        })
+    })
+})
+
+//VUEJS
+var app1 = new Vue({
+    el: '.app1',
+    data: {
+        message: 'Votre message a bien été envoyé',
+        success: false,
+    },
+
+    methods: {
+        envoi: (e) => {
+            if (this.success = true) {
+                e.preventDefault();
+                fetch("api-json.php")
+                    .then(res => res.json())
+            }
+        },
+
+        close: () => {
+            this.success = false
+        }
+    }
+})
+
+//LIGHTBOX
+
+
+// var listeFormAjax = document.querySelectorAll("form.ajax");
+//   listeFormAjax.forEach(function (balise) {
+
+//       balise.addEventListener('submit', function (event) {
+//           event.preventDefault();
+//           var formData = new FormData(this);
+//           fetch("api-json.php", {
+//               method: "POST",
+//               body: formData
+//           })
+//       })
+//   })

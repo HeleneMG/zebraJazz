@@ -1,5 +1,5 @@
 <main>
-    <section class="accueil">
-    <img src="assets/img/logo_zebrajazz.png" alt="logo zébrajazz">
-    </section>
+        <section class="accueil">
+            <!--<img src="assets/img/logo_zébrajazz.webp" alt="logo zébrajazz">-->
+        </section>
 </main>

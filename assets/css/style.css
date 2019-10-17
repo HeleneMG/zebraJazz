@@ -17,7 +17,7 @@ header{
 }
 h1{
     position: relative;
-    top: 70px;
+    top: 105px;
     width: 263px;
     margin: 0 auto;
     padding: 0;
@@ -47,19 +47,45 @@ h3{
     padding-top: 20px;
     text-align: center;
 }
-nav{
-    height: 15vh;
-    position: absolute;
-    z-index: 1;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    background-color: rgb(0, 0, 0);
+nav.deux{
+    display: none;
 }
-.sticky {
+
+nav.une {
+    width: 100%;
+    background-color: black;
     position: fixed;
     top: 0;
 }
+.menuNav{
+    width: 100%;
+    height: 100vh;
+    margin: 20px auto;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    z-index: 5;
+    color: rgb(255, 255, 255);
+    list-style: none;
+    position: absolute;
+    top: -20px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+}
+.menuHamb:hover{
+    cursor: pointer;
+}
+.menuHamb{
+    color: white;
+    padding: 8px;
+}
+.material-icons.md-18.arrow-back { 
+    color: white;
+    position: absolute;
+    left: 7px;
+    top: 3px;
+}
+
 ul{
     display : flex;
     flex-wrap: wrap;
@@ -69,6 +95,7 @@ ul{
     list-style: none;
     border-top: solid 1px rgb(255, 255, 255);
     border-bottom: solid 1px rgb(255, 255, 255);
+    background-color: rgb(0, 0, 0);
 }
 li{
     text-align: center;
@@ -85,13 +112,13 @@ a :hover{
 
 section{
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.897);
+    background-color: rgb(0, 0, 0);
     color: white;
     text-align: justify;
     line-height: 30px;
 }
 .accueil img{
-    width: 50%;
+    width: 20%;
     margin: auto;
 }
 .musicien img{
@@ -111,14 +138,15 @@ section{
 .video{
 	position: relative;
 	padding-bottom: 56.25%; /* 16:9 */
-	height: 0;
+    height: 0;
+    z-index: 0;
 }
 .video iframe {
 	position: absolute;
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+    height: 100%;
 }
 
 .photosflex {
@@ -127,10 +155,15 @@ section{
     align-items: center;
     justify-content: center;
 }
-.affiches img, .galerie img{
+.affiches img, .image img{
     margin: 20px auto;
     width: 70%;
-    border: solid 1px rgba(255, 255, 255, 0.459);
+    border: solid 4px rgba(255, 255, 255, 0.1);
+}
+.image img{
+    width: 274px;
+    height: 250px;
+    object-fit: cover;
 }
 #flyer{
     width: 60%;
@@ -171,7 +204,7 @@ form button{
 #toTop { 
     display:none;
     position: fixed; 
-    z-index: 2;
+    z-index: 1;
     bottom: 4px;
     right: 8px;
     cursor: pointer;
@@ -201,12 +234,14 @@ form button{
     li{
         width: 89px;
         text-align: center;
-        padding: 10px; 
+        padding: 10px;
+        transition: 0.3s; 
     }
     li :hover{
-        padding: 8px;
+        padding: 11px;
         border-left: solid 1px white;
         border-right: solid 1px white;
+        transition: 0.3s; 
     }
     .bio{
         padding: 40px;
@@ -228,8 +263,20 @@ form button{
         padding : 5px 0;
         font-size: 46px;
     }
-    nav{
-        height: 8vh;
+    nav.une {
+        display: none;
+    }
+    nav.deux{
+        display: block;
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+    }
+    nav.sticky {
+        display: block;
+        width: 100%;
+        position: fixed;
+        top: 0;
     }
     main{
         height: auto;
@@ -250,12 +297,14 @@ form button{
         margin: 20px auto;
         width: calc(80% / 2);
     }
-    .galerie img{
+    .image{
         margin: 20px auto;
-        width: 300px;
-        height: 300px;
-        object-fit: cover; 
-        padding: 5px;
+        width: calc(90% / 2);
+    }
+    .image img{
+        width: 90%;
+        height: 150px;
+        object-fit: cover;
     }
     #flyer{
         width: 50%;
@@ -280,10 +329,8 @@ form button{
         padding: 10px;
         margin: 0;
     }
-    .galerie img{
-        margin: 20px auto;
-        width: calc(90% / 2);
-        object-fit: cover; 
+    .image img{
+        height: 250px;
     }
     form {
         display:flex;
